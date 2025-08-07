@@ -1,10 +1,10 @@
 package br.com.cancelier.api_produtos_elastic.domain;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 @Data
@@ -14,6 +14,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 @Document(indexName = "produtos")
 public class Produto {
 
+    @Id
     private String id;
 
     private String nome;
